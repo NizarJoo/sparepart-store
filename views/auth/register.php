@@ -1,6 +1,6 @@
 <?php
 $page_title = "Register - Toko Sparepart";
-include '../layouts/header.php';
+include 'views/layouts/header.php';
 ?>
 
 <div class="container py-5">
@@ -122,12 +122,12 @@ include '../layouts/header.php';
                         </div>
                         
                         <!-- Terms -->
-                        <div class="mb-3 form-check">
+                        <!-- <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="terms" required>
                             <label class="form-check-label" for="terms">
                                 Saya setuju dengan <a href="#">syarat dan ketentuan</a>
                             </label>
-                        </div>
+                        </div> -->
                         
                         <!-- Submit Button -->
                         <div class="d-grid gap-2 mb-3">
@@ -190,5 +190,5 @@ include '../layouts/header.php';
 
 <?php
 unset($_SESSION['old']); // Clear old input
-include '../layouts/footer.php';
+include 'views/layouts/footer.php';
 ?>

@@ -1,6 +1,6 @@
 <?php
 $page_title = "Tambah Produk - Admin";
-include '../layouts/header.php';
+include 'views/layouts/header.php';
 ?>
 
 <div class="container-fluid py-4">
@@ -151,5 +151,5 @@ include '../layouts/header.php';
 
 <?php
 unset($_SESSION['old']);
-include '../layouts/footer.php';
+include 'views/layouts/footer.php';
 ?>

@@ -1,6 +1,6 @@
 <?php
 $page_title = "Semua Produk - Toko Sparepart";
-include '../layouts/header.php';
+include 'views/layouts/header.php';
 ?>
 
 <!-- Page Header -->
@@ -169,4 +169,4 @@ include '../layouts/header.php';
     });
 </script>
 
-<?php include '../layouts/footer.php'; ?>
+<?php include 'views/layouts/footer.php'; ?>

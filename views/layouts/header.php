@@ -1,10 +1,7 @@
 <?php
 // Get cart count if user logged in
-$cart_count = 0;
-if (isset($_SESSION['user_id'])) {
-    require_once 'controllers/CartController.php';
-    $cart_count = CartController::getCartCount($db);
-}
+$page_title = $page_title ?? 'Toko Sparepart Komputer';
+$cart_count = $cart_count ?? 0;
 ?>
 <!DOCTYPE html>
 <html lang="id">

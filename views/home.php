@@ -1,6 +1,7 @@
 <?php
-$page_title = "Home - Toko Sparepart Komputer";
-include 'layouts/header.php';
+$page_title = $page_title ?? 'Home';
+$cart_count = $cart_count ?? 0;
+include 'views/layouts/header.php';
 ?>
 
 <!-- Hero Section -->

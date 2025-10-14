@@ -1,6 +1,6 @@
 <?php
 $page_title = htmlspecialchars($category['category_name']) . " - Toko Sparepart";
-include '../layouts/header.php';
+include 'views/layouts/header.php';
 ?>
 
 <!-- Page Header -->
@@ -93,4 +93,4 @@ include '../layouts/header.php';
     <?php endif; ?>
 </div>
 
-<?php include '../layouts/footer.php'; ?>
+<?php include 'views/layouts/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
 $page_title = "Profile - Toko Sparepart";
-include '../layouts/header.php';
+include 'views/layouts/header.php';
 ?>
 
 <div class="container py-5">
@@ -182,4 +182,4 @@ include '../layouts/header.php';
     });
 </script>
 
-<?php include '../layouts/footer.php'; ?>
+<?php include 'views/layouts/footer.php'; ?>

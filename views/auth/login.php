@@ -1,6 +1,6 @@
 <?php
 $page_title = "Login - Toko Sparepart";
-include '../layouts/header.php';
+include 'views/layouts/header.php';
 ?>
 
 <div class="container py-5">
@@ -8,16 +8,13 @@ include '../layouts/header.php';
         <div class="col-md-5">
             <div class="card shadow-lg">
                 <div class="card-body p-5">
-                    <!-- Header -->
                     <div class="text-center mb-4">
                         <i class="bi bi-box-arrow-in-right" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h2 class="mt-3 fw-bold">Login</h2>
                         <p class="text-muted">Masuk ke akun Anda</p>
                     </div>
                     
-                    <!-- Login Form -->
                     <form action="index.php?action=login-process" method="POST">
-                        <!-- Email -->
                         <div class="mb-3">
                             <label for="email" class="form-label">
                                 <i class="bi bi-envelope"></i> Email
@@ -32,7 +29,6 @@ include '../layouts/header.php';
                                    autofocus>
                         </div>
                         
-                        <!-- Password -->
                         <div class="mb-3">
                             <label for="password" class="form-label">
                                 <i class="bi bi-lock"></i> Password
@@ -50,7 +46,6 @@ include '../layouts/header.php';
                             </div>
                         </div>
                         
-                        <!-- Remember Me -->
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="remember" name="remember">
                             <label class="form-check-label" for="remember">
@@ -58,19 +53,16 @@ include '../layouts/header.php';
                             </label>
                         </div>
                         
-                        <!-- Submit Button -->
                         <div class="d-grid gap-2 mb-3">
                             <button type="submit" class="btn btn-primary btn-lg">
                                 <i class="bi bi-box-arrow-in-right"></i> Login
                             </button>
                         </div>
                         
-                        <!-- Divider -->
                         <div class="text-center my-3">
                             <span class="text-muted">atau</span>
                         </div>
                         
-                        <!-- Register Link -->
                         <div class="text-center">
                             <p class="mb-0">Belum punya akun?</p>
                             <a href="index.php?action=register" class="btn btn-outline-primary w-100 mt-2">
@@ -79,14 +71,13 @@ include '../layouts/header.php';
                         </div>
                     </form>
                     
-                    <!-- Demo Accounts Info -->
-                    <div class="alert alert-info mt-4" role="alert">
+                    <!-- <div class="alert alert-info mt-4" role="alert">
                         <strong><i class="bi bi-info-circle"></i> Demo Akun:</strong>
                         <ul class="mb-0 mt-2 small">
                             <li><strong>Admin:</strong> admin@tokosparepart.com / admin123</li>
                             <li><strong>Customer:</strong> customer@example.com / customer123</li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             
@@ -120,5 +111,5 @@ include '../layouts/header.php';
 
 <?php
 unset($_SESSION['old']); // Clear old input
-include '../layouts/footer.php';
+include 'views/layouts/footer.php';
 ?>
