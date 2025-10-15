@@ -57,39 +57,60 @@
     </div>
 </footer>
 
-<!-- Bootstrap 5 JS Bundle (includes Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- Custom JavaScript -->
-<script>
-    // Auto-hide alerts after 5 seconds
-    setTimeout(function () {
-        let alerts = document.querySelectorAll('.alert');
-        alerts.forEach(function (alert) {
-            let bsAlert = new bootstrap.Alert(alert);
-            bsAlert.close();
-        });
-    }, 5000);
+    <script>
+        // setTimeout(function() {
+        //     let alerts = document.querySelectorAll('.alert');
+        //     alerts.forEach(function(alert) {
+        //         let bsAlert = new bootstrap.Alert(alert);
+        //         bsAlert.close();
+        //     });
+        // }, 5000);
 
-    // Confirm delete actions
-    document.querySelectorAll('.delete-confirm').forEach(function (element) {
-        element.addEventListener('click', function (e) {
-            if (!confirm('Apakah Anda yakin ingin menghapus data ini?')) {
+        // SweetAlert Delete Confirmation
+        document.querySelectorAll('.delete-confirm').forEach(function(element) {
+            element.addEventListener('click', function(e) {
                 e.preventDefault();
-            }
+                const deleteUrl = this.getAttribute('href');
+                const itemName = this.getAttribute('data-name') || 'data ini';
+                
+                Swal.fire({
+                    title: 'Hapus Data?',
+                    text: `Apakah Anda yakin ingin menghapus ${itemName}?`,
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#dc3545',
+                    cancelButtonColor: '#6c757d',
+                    confirmButtonText: 'Ya, Hapus!',
+                    cancelButtonText: 'Batal',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Show loading
+                        Swal.fire({
+                            title: 'Menghapus...',
+                            allowOutsideClick: false,
+                            didOpen: () => {
+                                Swal.showLoading();
+                            }
+                        });
+                        window.location.href = deleteUrl;
+                    }
+                });
+            });
         });
-    });
-
-    // Format currency inputs
-    document.querySelectorAll('.currency-input').forEach(function (input) {
-        input.addEventListener('blur', function () {
-            let value = parseFloat(this.value.replace(/[^0-9.-]+/g, ''));
-            if (!isNaN(value)) {
-                this.value = value.toLocaleString('id-ID');
-            }
+        
+        // Format currency inputs
+        document.querySelectorAll('.currency-input').forEach(function(input) {
+            input.addEventListener('blur', function() {
+                let value = parseFloat(this.value.replace(/[^0-9.-]+/g, ''));
+                if (!isNaN(value)) {
+                    this.value = value.toLocaleString('id-ID');
+                }
+            });
         });
-    });
-</script>
-</body>
-
+    </script>
+    </body>
 </html>

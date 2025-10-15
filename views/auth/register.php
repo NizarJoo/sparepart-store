@@ -8,17 +8,14 @@ include 'views/layouts/header.php';
         <div class="col-md-6">
             <div class="card shadow-lg">
                 <div class="card-body p-5">
-                    <!-- Header -->
                     <div class="text-center mb-4">
                         <i class="bi bi-person-plus" style="font-size: 3rem; color: var(--primary-color);"></i>
                         <h2 class="mt-3 fw-bold">Buat Akun Baru</h2>
                         <p class="text-muted">Daftar untuk mulai berbelanja</p>
                     </div>
                     
-                    <!-- Register Form -->
                     <form action="index.php?action=register-process" method="POST">
                         <div class="row">
-                            <!-- Username -->
                             <div class="col-md-6 mb-3">
                                 <label for="username" class="form-label">
                                     <i class="bi bi-person"></i> Username <span class="text-danger">*</span>
@@ -32,7 +29,6 @@ include 'views/layouts/header.php';
                                        required>
                             </div>
                             
-                            <!-- Email -->
                             <div class="col-md-6 mb-3">
                                 <label for="email" class="form-label">
                                     <i class="bi bi-envelope"></i> Email <span class="text-danger">*</span>
@@ -47,7 +43,6 @@ include 'views/layouts/header.php';
                             </div>
                         </div>
                         
-                        <!-- Full Name -->
                         <div class="mb-3">
                             <label for="full_name" class="form-label">
                                 <i class="bi bi-person-badge"></i> Nama Lengkap <span class="text-danger">*</span>
@@ -62,7 +57,6 @@ include 'views/layouts/header.php';
                         </div>
                         
                         <div class="row">
-                            <!-- Password -->
                             <div class="col-md-6 mb-3">
                                 <label for="password" class="form-label">
                                     <i class="bi bi-lock"></i> Password <span class="text-danger">*</span>
@@ -82,7 +76,6 @@ include 'views/layouts/header.php';
                                 <small class="text-muted">Minimal 6 karakter</small>
                             </div>
                             
-                            <!-- Confirm Password -->
                             <div class="col-md-6 mb-3">
                                 <label for="confirm_password" class="form-label">
                                     <i class="bi bi-lock-fill"></i> Konfirmasi Password <span class="text-danger">*</span>
@@ -96,7 +89,6 @@ include 'views/layouts/header.php';
                             </div>
                         </div>
                         
-                        <!-- Phone -->
                         <div class="mb-3">
                             <label for="phone" class="form-label">
                                 <i class="bi bi-telephone"></i> No. Telepon
@@ -109,7 +101,6 @@ include 'views/layouts/header.php';
                                    value="<?= $_SESSION['old']['phone'] ?? '' ?>">
                         </div>
                         
-                        <!-- Address -->
                         <div class="mb-3">
                             <label for="address" class="form-label">
                                 <i class="bi bi-geo-alt"></i> Alamat

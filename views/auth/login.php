@@ -81,7 +81,6 @@ include 'views/layouts/header.php';
                 </div>
             </div>
             
-            <!-- Back to Home -->
             <div class="text-center mt-3">
                 <a href="index.php?action=home" class="text-decoration-none">
                     <i class="bi bi-arrow-left"></i> Kembali ke Home
@@ -91,7 +90,6 @@ include 'views/layouts/header.php';
     </div>
 </div>
 
-<!-- Toggle Password Visibility Script -->
 <script>
     document.getElementById('togglePassword').addEventListener('click', function() {
         const passwordInput = document.getElementById('password');
@@ -110,6 +108,6 @@ include 'views/layouts/header.php';
 </script>
 
 <?php
-unset($_SESSION['old']); // Clear old input
+unset($_SESSION['old']); 
 include 'views/layouts/footer.php';
 ?>

@@ -84,7 +84,8 @@ include 'views/layouts/header.php';
                                                 <i class="bi bi-pencil"></i>
                                             </a>
                                             <a href="index.php?action=admin-products-delete&id=<?= $product['product_id'] ?>"
-                                                class="btn btn-outline-danger delete-confirm" title="Delete">
+                                                class="btn btn-outline-danger delete-confirm" data-name="<?= htmlspecialchars($product['product_name']) ?>"
+                                                title="Delete">
                                                 <i class="bi bi-trash"></i>
                                             </a>
                                         </div>

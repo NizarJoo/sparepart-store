@@ -1,6 +1,6 @@
 <?php
 $page_title = "Tambah Kategori - Admin";
-include '../layouts/header.php';
+include 'views/layouts/header.php';
 ?>
 
 <div class="container py-4">
@@ -52,4 +52,4 @@ include '../layouts/header.php';
     </div>
 </div>
 
-<?php include '../layouts/footer.php'; ?>
+<?php include 'views/layouts/footer.php'; ?>

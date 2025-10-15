@@ -1,6 +1,6 @@
 <?php
 $page_title = "Kelola Kategori - Admin";
-include '../layouts/header.php';
+include 'views/layouts/header.php';
 ?>
 
 <div class="container-fluid py-4">
@@ -13,7 +13,7 @@ include '../layouts/header.php';
             <i class="bi bi-plus-lg"></i> Tambah Kategori
         </a>
     </div>
-    
+
     <div class="card border-0 shadow-sm">
         <div class="card-body">
             <?php if (!empty($categories)): ?>
@@ -41,12 +41,13 @@ include '../layouts/header.php';
                                     <td><?= date('d M Y', strtotime($category['created_at'])) ?></td>
                                     <td>
                                         <div class="btn-group btn-group-sm">
-                                            <a href="index.php?action=admin-categories-edit&id=<?= $category['category_id'] ?>" 
-                                               class="btn btn-outline-primary">
+                                            <a href="index.php?action=admin-categories-edit&id=<?= $category['category_id'] ?>"
+                                                class="btn btn-outline-primary">
                                                 <i class="bi bi-pencil"></i>
                                             </a>
-                                            <a href="index.php?action=admin-categories-delete&id=<?= $category['category_id'] ?>" 
-                                               class="btn btn-outline-danger delete-confirm">
+                                            <a href="index.php?action=admin-categories-delete&id=<?= $category['category_id'] ?>"
+                                                class="btn btn-outline-danger delete-confirm"
+                                                data-name="Kategori <?= htmlspecialchars($category['category_name']) ?>">
                                                 <i class="bi bi-trash"></i>
                                             </a>
                                         </div>
@@ -69,4 +70,4 @@ include '../layouts/header.php';
     </div>
 </div>
 
-<?php include '../layouts/footer.php'; ?>
+<?php include 'views/layouts/footer.php'; ?>
